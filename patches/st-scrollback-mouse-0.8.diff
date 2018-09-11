@@ -2,7 +2,7 @@ diff --git a/config.def.h b/config.def.h
 index 27d42ca..feec7e2 100644
 --- a/config.def.h
 +++ b/config.def.h
-@@ -156,8 +156,14 @@ static unsigned int defaultattr = 11;
+@@ -155,8 +155,14 @@ static unsigned int defaultattr = 11;
   */
  static MouseShortcut mshortcuts[] = {
  	/* button               mask            string */
@@ -23,7 +23,10 @@ diff --git a/st.h b/st.h
 index 628e876..cdd25ae 100644
 --- a/st.h
 +++ b/st.h
-@@ -81,6 +81,13 @@ typedef union {
+@@ -81,9 +81,16 @@ typedef union {
+	int i;
+	uint ui;
+	float f;
  	const void *v;
  } Arg;
  
@@ -37,8 +40,9 @@ index 628e876..cdd25ae 100644
  void die(const char *, ...);
  void redraw(void);
  void draw(void);
-@@ -129,3 +136,4 @@ extern char *termname;
+@@ -128,4 +136,5 @@ extern char *termname;
  extern unsigned int tabspaces;
+ extern unsigned int alpha;
  extern unsigned int defaultfg;
  extern unsigned int defaultbg;
 +extern MouseKey mkeys[];
@@ -46,7 +50,7 @@ diff --git a/x.c b/x.c
 index d43a529..754d859 100644
 --- a/x.c
 +++ b/x.c
-@@ -409,6 +409,7 @@ bpress(XEvent *e)
+@@ -413,6 +413,7 @@ bpress(XEvent *e)
  {
  	struct timespec now;
  	MouseShortcut *ms;
