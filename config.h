@@ -5,8 +5,8 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Source Code Pro:pixelsize=12:antialias=true:autohint=true";
-static int borderpx = 2;
+static char *font = "Source Code Pro:pixelsize=11.5:antialias=true:autohint=true";
+static int borderpx = 15; /* padding */
 
 /*
  * What program is execed by st depends of these precedence rules:
