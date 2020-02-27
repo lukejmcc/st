@@ -142,6 +142,21 @@ Print the full screen to the
 Print the selection to the
 .I iofile.
 .TP
+.B Ctrl+Shift-Return
+Open new terminal in the same directory.
+.TP
+.B Ctrl+Shift-K
+Scroll 1 line up.
+.TP
+.B Ctrl+Shift J
+Scroll 1 line down.
+.TP
+.B Shift-Page Up
+Scroll page up.
+.TP
+.B Shift-Page Down
+Scroll page down.
+.TP
 .B Ctrl-Shift-Page Up
 Increase font size.
 .TP
@@ -159,10 +174,6 @@ Copy the selected text to the clipboard selection.
 .TP
 .B Ctrl-Shift-v
 Paste from the clipboard selection.
-.TP
-.B Ctrl-Shift-i
-Launch dmenu to enter a unicode codepoint and send the corresponding glyph
-to st.
 .SH CUSTOMIZATION
 .B st
 can be customized by creating a custom config.h and (re)compiling the source
